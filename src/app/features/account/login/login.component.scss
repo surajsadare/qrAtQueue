@@ -1,0 +1,58 @@
+.login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 92%;
+}
+.custom-form-control {
+  padding: 0.5rem 0.75rem !important;
+  font-size: 0.9375rem !important;
+  font-weight: normal !important;
+  color: #000 !important;
+  background-color: #fff !important;
+  background-clip: padding-box;
+  border-radius: 0.375rem !important;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+input:focus {
+  border: 1px solid #4eb2d0 !important;
+  box-shadow: unset !important;
+}
+// input:focus + .eye-inside {
+//   border: 1px solid #4eb2d0 !important;
+//   border-left: 0px !important ;
+// }
+// .eye-input:focus {
+//   border-right: 0px !important;
+// }
+
+// .eye-input {
+//   border-right: 0px !important;
+//   border-top-right-radius: 0px !important;
+//   border-bottom-right-radius: 0px !important;
+// }
+
+// .eye-inside {
+//   border-top-right-radius: 0px !important;
+//   border-bottom-right-radius: 0px !important;
+// }
+// .eye-inside:focus {
+//   border: 1px solid #4eb2d0 !important;
+//   box-shadow: unset !important;
+// }
+.eye-postion {
+  position: relative;
+  left: 92%;
+  bottom: 36%;
+}
+.eye-default-color {
+  color: #82839b !important;
+}
+
+@media (min-width: 768px) {
+  .login {
+    width: 70%;
+  }
+}

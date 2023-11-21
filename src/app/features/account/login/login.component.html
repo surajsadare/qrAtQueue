@@ -1,0 +1,74 @@
+<section class="login bg-white">
+  <div class="container">
+    <div class="row shadow">
+      <div class="col-md-6 p-md-5 p-3">
+        <img src="" alt="" />
+        <h3 class="text-black">Log in</h3>
+        <form [formGroup]="loginForm" (keyup.enter)="onEnterLogin($event)">
+          <div class="row mb-2">
+            <div class="col-md-12 col-lg-8 mb-2">
+              <label for="name" class="font-w-500 text-black">User Name</label>
+              <input
+                class="form-control custom-form-control"
+                type="text"
+                id="name"
+                formControlName="username"
+                placeholder="Enter User Name"
+              />
+              <div
+                class="text-danger my-2"
+                *ngIf="
+                  loginFormControl.username.invalid &&
+                  (submitted ||
+                    loginFormControl.username.dirty ||
+                    loginFormControl.username.touched)
+                "
+              >
+                <span *ngIf="loginFormControl.username.errors?.required">
+                  Username is required.
+                </span>
+              </div>
+            </div>
+            <div class="col-md-12 col-lg-8 mb-2">
+              <label for="pass" class="font-w-500 text-black">Password</label>
+              <input
+                class="form-control custom-form-control eye-input"
+                [type]="showPassword ? 'text' : 'password'"
+                id="pass"
+                formControlName="password"
+                placeholder="Enter Password"
+              />
+              <!-- <span class="eye-postion">
+                <i
+                  class="eye-default-color"
+                  [ngClass]="{
+                    'fa fa-eye': !showPassword,
+                    'fas fa-eye-slash': showPassword
+                  }"
+                  (click)="showPassword = !showPassword"
+                ></i>
+              </span> -->
+              <div
+                class="text-danger"
+                *ngIf="
+                  loginFormControl.password.invalid &&
+                  (submitted ||
+                    loginFormControl.password.dirty ||
+                    loginFormControl.password.touched)
+                "
+              >
+                <span *ngIf="loginFormControl.password.errors?.required">
+                  Password is required.
+                </span>
+              </div>
+            </div>
+
+            <div class="col-md-12 col-lg-8" (click)="submit()">
+              <button class="btn btn-primary w-100">Log In</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

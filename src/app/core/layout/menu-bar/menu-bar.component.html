@@ -1,0 +1,52 @@
+<div class="d-flex flex-column flex-shrink-0 p-3 text-white">
+  <a
+    href="/"
+    class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
+  >
+    <span class="fs-4">Sidebar</span>
+  </a>
+  <hr />
+  <ul class="flex-column mb-auto nav nav-pills">
+    <li (click)="onTabChange('home')" class="nav-item cursor">
+      <a
+        [ngClass]="{ active: activeTab == 'home' }"
+        class="nav-link text-white active"
+        aria-current="page"
+      >
+        Home
+      </a>
+    </li>
+    <li (click)="onTabChange('dashboard')" class="nav-item cursor">
+      <a
+        [ngClass]="{ active: activeTab == 'dashboard' }"
+        class="nav-link text-white"
+      >
+        Dashboard
+      </a>
+    </li>
+    <li (click)="onTabChange('order')" class="nav-item cursor">
+      <a
+        [ngClass]="{ active: activeTab == 'order' }"
+        class="nav-link text-white"
+      >
+        Orders
+      </a>
+    </li>
+    <li (click)="onTabChange('product')" class="nav-item cursor">
+      <a
+        [ngClass]="{ active: activeTab == 'product' }"
+        class="nav-link text-white"
+      >
+        Products
+      </a>
+    </li>
+    <li (click)="onTabChange('customer')" class="nav-item cursor">
+      <a
+        [ngClass]="{ active: activeTab == 'customer' }"
+        class="nav-link text-white"
+      >
+        Customers
+      </a>
+    </li>
+  </ul>
+</div>
