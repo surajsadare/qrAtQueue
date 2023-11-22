@@ -4,24 +4,26 @@ import { LayoutComponent } from './core/layout/layout.component';
 
 const routes: Routes = [
   {
-    path: 'app',
-    component: LayoutComponent,
-    children: [],
-  },
-  {
-    path: 'app/account',
-    loadChildren: () =>
-      import('./features/account/account.module').then((m) => m.AccountModule),
-  },
-  {
     path: '*',
-    redirectTo: '/',
+    redirectTo: 'app/create-queue',
     pathMatch: 'full',
   },
   {
     path: '',
-    redirectTo: 'app',
+    redirectTo: 'app/create-queue',
     pathMatch: 'full',
+  },
+  // {
+  //   path: 'app',
+  //   component: LayoutComponent,
+  //   children: [],
+  // },
+  {
+    path: 'app/create-queue',
+    loadChildren: () =>
+      import('./features/create-queue/create-queue.module').then(
+        (m) => m.CreateQueueModule
+      ),
   },
 ];
 
