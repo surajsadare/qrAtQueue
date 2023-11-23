@@ -19,7 +19,7 @@ const routes: Routes = [
   //   children: [],
   // },
   {
-    path: 'app/create-queue',
+    path: 'app',
     loadChildren: () =>
       import('./features/create-queue/create-queue.module').then(
         (m) => m.CreateQueueModule

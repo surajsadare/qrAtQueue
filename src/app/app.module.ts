@@ -18,7 +18,7 @@ import { LayoutModule } from './core/layout/layout.module';
     SharedModule,
     LayoutModule,
   ],
-  exports: [RouterModule],
+  exports: [],
   providers: [],
   bootstrap: [AppComponent],
 })

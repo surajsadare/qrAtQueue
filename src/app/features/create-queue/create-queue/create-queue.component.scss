@@ -1,10 +1,9 @@
-.lineCreator {
-  min-height: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  max-width: 580px;
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
+.Input__el {
+  padding: 12px;
+  height: 44px;
+  background-color: rgb(251 251 251);
+}
+::placeholder {
+  color: rgb(199, 197, 197);
+  opacity: 1; /* Firefox */
 }

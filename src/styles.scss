@@ -11,3 +11,14 @@
 .cursor {
   cursor: pointer;
 }
+
+.lineCreator {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 580px;
+  margin: 5rem auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
